@@ -1,0 +1,92 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --primary--dark: #333333;
+    --primary--light: #ffffff;
+    --ff: "IBM Plex Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+}
+
+body {
+    background: var(--primary--dark);
+    color: var(--primary--light);
+    padding-top: 2rem;
+    margin-inline: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-size: 0.60rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary--light);
+}
+
+.switch {
+    width: 100px;
+    display: flex;
+    font-size: 0.40rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.light {
+    color: var(--primary--light);
+}
+
+.dark {
+    display: none;
+}
+
+section {
+    max-width: 50%;
+    margin-inline: auto;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+section > * {
+    margin-block: 2rem;
+}
+
+section > article > h1 {
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: auto;
+}
+
+@media screen and (min-width: 950px) {
+    body {
+        margin-inline: 5rem;
+    }
+
+    section {
+        max-width: 80%;
+        flex-direction: row;
+    }
+
+    section > * {
+        margin-inline: 2rem;
+    }
+
+
+}

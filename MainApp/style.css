@@ -1,0 +1,202 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --primary--dark: #333333;
+    --secondary--dark: #666666;
+    --primary--light: #ffffff;
+    --secondary--light: #999999;
+    --ff: "IBM Plex Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+}
+
+body {
+    background: var(--primary--dark);
+    color: var(--primary--light);
+    padding-top: 2rem;
+    margin-inline: 1rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    font-size: 0.60rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary--light);
+}
+
+.switch {
+    width: 100px;
+    display: flex;
+    font-size: 0.40rem;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.light {
+    color: var(--primary--light);
+}
+
+.dark {
+    color: var(--primary--dark);
+}
+
+/* section1 */
+.section1 {
+    margin-inline: auto;
+    max-width: 70%;
+    margin-block: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 .book {
+    display: flex;
+    flex-direction: column;
+}
+
+.section1 .book img{
+    display: block;
+    max-width: 55%;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+}
+.section1 .book .information{
+    margin-bottom: 2rem;
+}
+
+.section1 .book .information .rating, .dis {
+    margin-bottom: 1rem;
+}
+
+.section1 .book .information .chart .progress {
+    margin-bottom: 0.5rem;
+}
+
+.section1 .book .information .chart .progress-bar {
+    height: 20px;
+    width: 100%;
+    background: var(--primary--light);
+    margin-bottom: 1rem;
+}
+
+.section1 .book .information .chart .progress-bar::before {
+    content: " ";
+    display: block;
+    height: 20px;
+    width: 70%;
+    background: var(--secondary--dark);
+}
+
+.section1 .book .information .action {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section1 .book .information .action button{
+    padding: 0.3rem 1rem;
+    font-family: var(--ff);
+    width: 49%;
+    border: none;
+    background: var(--primary--light);
+    color: var(--primary--dark);
+}
+
+.section1 .notes .listed-note {
+    margin-top: 1em;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 20px;
+    margin-top: auto;
+}
+
+/* Search fomr */
+form .search {
+    max-width: 100%;
+    margin-inline: auto;
+}
+
+.search input {
+    margin-block: 2rem;
+    width: 100%;
+    height: 5vh;
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 950px) {
+    body {
+        margin-inline: 5rem;
+    }
+
+    /* section1 */
+    .section1 {
+        margin-top: 5rem;
+        max-width: 90%;
+        flex-direction: row;
+    }
+
+    .section1 .book {
+        display: flex;
+        flex-direction: row; 
+        margin-inline: 0;     
+    }
+
+    .section1 .book img{
+        display: block;
+        max-width: 25%;
+        margin-right: 1.5rem;
+    }
+
+    .section1 .book > * {
+        flex-basis: 100%;
+    }
+
+    .section1 .book {
+        max-width: 80%;
+        /* margin-right: 20rem; */
+    }
+
+    .section1 .book .information {
+        margin-right: 10rem;
+        margin-block: auto;
+    }
+
+    .section1 .book .information .action button{
+        width: 49%;
+    }
+
+    .section1 .notes {
+        max-width: 20%;
+
+    }
+
+    .section1 .notes .listed-note {
+        /* margin-block: 1rem; */
+        height: 40vh;
+        overflow-y: scroll;
+    }
+
+    .section1 .notes .listed-note::-webkit-scrollbar-track {
+        display: none;
+    }
+
+}

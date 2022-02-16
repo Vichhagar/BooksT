@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BooksT | Book Tracker</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>BooksT</h1>
+        <div class="switch">
+            <h1 class="light">Light</h1>
+            <h1 class="dark">Dark</h1>
+        </div>
+        <h1><a href="#">Logout</a></h1>
+    </header>
+    <section class="section1">
+        <div class="book">
+            <img src="./bookcover.png" alt="">
+            <div class="information">
+                <h1>Book Title</h1>
+                <p class="rating">no rating yet</p>
+                <p class="dis">This is a short description
+                    of the book that I'm correctly
+                    reading, if it is a long description
+                    I will trip it to a certain length.
+                    This is a short description
+                    of the book that I'm correctly
+                    reading, if it is a long description
+                    I will trip it to a certain length.
+                </p>
+                <div class="chart">
+                    <p class="progress">235/432 Pages</p>
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="action">
+                    <button>add note</button>
+                    <button>mark as done</button>
+                </div>
+            </div>
+        </div>
+        <div class="notes">
+            <h1>My Notes</h1>
+            <p>14 Feb 2022</p>
+            <div class="listed-note">
+                <p>
+                    this section is the personal note about the book.
+                </p>
+            </div>
+        </div>
+    </section>
+    <form class="search">
+        <input type="text" name="search" placeholder="Enter book title to search">
+    </form>
+    <footer>
+        <p>Made by Vichhagar</p>
+    </footer>
+<script src="../app.js"></script>
+<script src="./app.js"></script>
+</body>
+</html>
